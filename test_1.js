@@ -68,7 +68,7 @@ msg.channel.sendMessage(evalthis(evalcode));
 var cmd = msg.content
 
 	if (cmd === settings.PREFIX + "owner") {
-		msg.channel.sendMessage("***The Bot Owner Is `Deboss`***")
+		msg.channel.sendMessage("***The Bot Owner Is `Deboss` & Cat***")
 	}
 	if (cmd.startsWith(settings.PREFIX + "stats racer")) {
 		msg.channel.sendMessage(`**❯_ **Racer
