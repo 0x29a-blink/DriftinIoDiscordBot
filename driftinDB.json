@@ -1,9 +1,9 @@
   {
-      "racer" {
+      "racer": {
 "Speed": "3"
 "Defense": "3"
 "nDamage": "3"
-"nHandling": "3"
+"Handling": "3"
       }
 
   }
