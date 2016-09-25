@@ -50,6 +50,11 @@ bot.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
 }) */
 bot.on(`message`, (msg) => {
 	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
+	if (msg.content.startsWith(`drift eval`)) {
+	msg.channel.sendMessage(eval(msg.content.substring(10)))
+	}
+	}
+	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
     if (msg.content === "drift update code") {
   const exec = require('child_process').exec;
    exec(`git pull`, function(err, stdout, stderr){
