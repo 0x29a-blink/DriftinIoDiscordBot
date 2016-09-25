@@ -52,14 +52,7 @@ bot.on(`message`, (msg) => {
 	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
 	if (msg.content.startsWith(`drift eval`)) {
 	var evalcode = message.content.substring(11)
-                try {
-                        var evaled = eval(evalcode);
-                        msg.channel.sendMessage(evaled)
-                }
-                catch (err) {
-                        msg.channel.sendMessage(err);
-                }
-        }
+msg.channel.sendMessage(eval(evalcode, err => {return err}));
 	}
 	}
 	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
