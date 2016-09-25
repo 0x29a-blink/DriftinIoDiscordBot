@@ -4,6 +4,7 @@ var bot = new Discord.Client({bot: true})
 
 var settings = {}
 settings.config = require(`./config.json`)
+settings.DB = require(`./driftinDB.json`)
 settings.TOKEN = settings.config.TOKEN
 settings.PREFIX = `drift `
 settings.YTAPI = settings.config.YTAPI
@@ -20,11 +21,11 @@ var opts = {
   key: settings.YTAPI
 };
 
-
-
-
-
-
+var 1 = `🔲`
+var 2 = `🔲🔲`
+var 3 = `🔲🔲🔲`
+var 4 = `🔲🔲🔲🔲`
+var 5 = `🔲🔲🔲🔲🔲`
 // cleverbot    = require("./cleverbot.js").cleverbot
 
 bot.on(`guildMemberAdd`, (guild, member) => {
@@ -71,7 +72,7 @@ var cmd = msg.content
 		msg.channel.sendMessage("***The Bot Owner Is `Deboss`***")
 	}
 	if (cmd === settings.PREFIX + "stats racer") {
-		msg.channel.sendMessage("Racer\nSpeed : 🔲🔲🔲\nDefense : 🔲🔲🔲\nDamage : 🔲🔲🔲\nHandling : 🔲🔲🔲")
+		msg.channel.sendMessage(`Racer\nSpeed : ${3}\nDefense : 🔲🔲🔲\nDamage : 🔲🔲🔲\nHandling : 🔲🔲🔲`)
 	}
 	if (cmd === settings.PREFIX + "stats bully") {
 		msg.channel.sendMessage("Bully\nSpeed : 🔲\nDefense : 🔲🔲🔲🔲\nDamage : 🔲\nHandling : 🔲🔲🔲🔲")
