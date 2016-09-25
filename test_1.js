@@ -7,7 +7,8 @@ settings.config = require(`./config.json`)
 settings.TOKEN = settings.config.TOKEN
 settings.PREFIX = `drift `
 settings.YTAPI = settings.config.YTAPI
-
+settings.CatID = `177286767903244288`
+settings.DebossID = `160853902726660096`
 
 let queue = {};
 
@@ -48,7 +49,7 @@ bot.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
         }
 }) */
 bot.on(`message`, (msg) => {
-	if (msg.author.id === `177286767903244288` || msg.author.id === `160853902726660096`) {
+	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
     if (msg.content === "drift update code") {
   const exec = require('child_process').exec;
    exec(`git pull`, function(err, stdout, stderr){
