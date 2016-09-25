@@ -53,7 +53,7 @@ bot.on(`message`, (msg) => {
 	if (msg.content.startsWith(`drift eval`)) {
 	var evalcode = message.content.substring(11)
 function evalthis(args) {
-try { return eval(args) } catch (e) { return e }
+try { return eval(args) } catch (e) { return e } }
 msg.channel.sendMessage(evalthis(evalcode));
 	}
 	}
