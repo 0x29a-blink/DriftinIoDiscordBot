@@ -77,13 +77,17 @@ var cmd = msg.content
 	}
 	if (cmd === settings.PREFIX + "stats bully") {
 		msg.channel.sendMessage(`**❯_ **Bully
-Speed**❯**${settings.DB.bully.Speed}
-Defense**❯**${settings.DB.bully.Defence}
-Damage**❯**${settings.DB.bully.Damage}
-Handling**❯**${settings.DB.bully.Handlink}`)
+**❯_ **Speed**❯**${settings.DB.bully.Speed}
+**❯_ **Defense**❯**${settings.DB.bully.Defence}
+**❯_ **Damage**❯**${settings.DB.bully.Damage}
+**❯_ **Handling**❯**${settings.DB.bully.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats flash") {
-		msg.channel.sendMessage("Flash\nSpeed : 🔲🔲🔲🔲🔲🔲\nDefense : 🔲\nDamage : 🔲\nHandling : 🔲")
+		msg.channel.sendMessage(`**❯_ **Flash
+**❯_ **Speed**❯**${settings.DB.bully.Speed}
+**❯_ **Defense**❯**${settings.DB.bully.Defence}
+**❯_ **Damage**❯**${settings.DB.bully.Damage}
+**❯_ **Handling**❯**${settings.DB.bully.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats hazard") {
 		msg.channel.sendMessage("Hazard\nSpeed : 🔲🔲\nDefense : 🔲🔲🔲\nDamage : 🔲🔲🔲🔲🔲\nHandling : 🔲🔲")
