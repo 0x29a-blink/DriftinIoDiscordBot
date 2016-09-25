@@ -11,6 +11,13 @@ settings.DebossID = `160853902726660096`
 settings.autorestart = true
 settings.exec = require('child_process').exec;
 settings.pf = settings.prefix ? settings.prefix : `${client.user.toString()} `;
+settings.cmdeasy = new Map([
+  ["owner", "***The Bot Owner Is \`Deboss\` & Cat***"],
+  ["", ""],
+  ["", ""],
+  ["", ""],
+  ["", ""]
+]);
 // SETTINGS
 
 const commands = {
@@ -50,6 +57,14 @@ client.on('reconnecting', () => {
 });
 
 client.on('message', msg => {
+  
+  var command_name = msg.content.slice(6);
+  
+  if(settings.cmdeasy.has(command_name)) {
+msg.channel.sendMessage(settings.cmdeasy.get(command_name))
+    return;
+  }
+
 
     if (msg.author.bot) return;
     if (!msg.content.startsWith(settings.pf)) return;
