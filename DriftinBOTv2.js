@@ -45,8 +45,9 @@ settings.exec(`git pull`, function(err, stdout, stderr){
         msg.channel.sendMessage('initiating protocol RESTART DRIFTIN BOT').then(() => process.exit(1));
     }  },
     'eval': (msg, newContent) => {
+      msg.content = msg.content.substring(11)
         if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
-        const code = msg.substring(11)
+        const code = msg.content
         if (!code.length) return message.reply(`Add some code there`);
         try {
             const output = eval(code);
