@@ -45,6 +45,83 @@ settings.exec(`git pull`, function(err, stdout, stderr){
             msg.channel.sendMessage(`\`INPUT:\`\n\`\`\`${code.replace(/`/g, '"')}\`\`\`\n\`ERROR:\`\n\`\`\`${err}\`\`\``);
         }
     }
+  },
+  'music': msg => {
+  if(msg.content === 'play') {
+			if (queue[msg.guild.id] === undefined) return msg.channel.sendMessage(`**drift add** \`song_name\``);
+			if (!bot.voiceConnections.exists('channel', msg.member.voiceChannel)) return msg.channel.sendMessage(`**drift join** to make me join a voice channel`);
+			if (queue[msg.guild.id].playing) return msg.channel.sendMessage(`**I am already playing**`);
+			let myVoiceConnection = bot.voiceConnections.find('channel', msg.member.voiceChannel);
+			let dispatcher;
+			queue[msg.guild.id].playing = true;
+
+			console.log(queue);
+			(function play(song) {
+				console.log(song);
+				if (song === undefined) return msg.channel.sendMessage('⏹ playlist is empty\n⏏ left voice channel').then(() => {
+					queue[msg.guild.id].playing = false;
+					msg.member.voiceChannel.leave();
+				});
+				msg.channel.sendMessage(`▶ **${song.title}** added by **${song.requester}**`);
+				dispatcher = myVoiceConnection.playStream(yt(song.url, { audioonly: true }), { passes : 1 });
+				let collector = msg.channel.createCollector(m => m);
+				collector.on('message', m => {
+					if (m.content.startsWith('pause')) {
+						msg.channel.sendMessage(`⏸ **${song.title}**`).then(() => {dispatcher.pause();});
+					} else if (m.content.startsWith('resume')){
+						msg.channel.sendMessage(`⏯ **${song.title}**`).then(() => {dispatcher.resume();});
+					} else if (m.content.startsWith('skip')){
+						msg.channel.sendMessage(`⏭ **${song.title}**`).then(() => {dispatcher.end();});
+				} else if (m.content.startsWith('next')){
+						msg.channel.sendMessage(`⏭ **${song.title}**`).then(() => {dispatcher.end();});
+				}
+				});
+				dispatcher.on('end', () => {
+					collector.stop();
+					queue[msg.guild.id].songs.shift();
+					play(queue[msg.guild.id].songs[0]);
+				});
+				dispatcher.on('error', (err) => {
+					return msg.channel.sendMessage('error: ' + err).then(() => {
+						collector.stop();
+						queue[msg.guild.id].songs.shift();
+						play(queue[msg.guild.id].songs[0]);
+					});
+				});
+			})(queue[msg.guild.id].songs[0]);
+		} else if(msg.content.startsWith("join")) {
+			const voiceChannel = msg.member.voiceChannel;
+			if (!voiceChannel || voiceChannel.type !== 'voice') return msg.reply('I couldn\'t connect to your voice channel...');
+			voiceChannel.join();
+		} else if(msg.content.startsWith("leave")) {
+			const voiceChannel = msg.member.voiceChannel;
+			voiceChannel.leave();
+		}else if(msg.content.startsWith("now")) {
+			msg.channel.sendMessage(`**🎤 ${queue[msg.guild.id].songs[0].title}** added by **${queue[msg.guild.id].songs[0].requester}**`)
+		}else if(msg.content.startsWith("later")) {
+			msg.channel.sendMessage(`**🆙 ${queue[msg.guild.id].songs[1].title}** added by **${queue[msg.guild.id].songs[1].requester}**`)
+		}else if(msg.content.startsWith("playlist")) {
+			if (queue[msg.guild.id] === undefined) return msg.channel.sendMessage(`**drift add \`song_name\`**. First add songs to see playlist`);
+		let tosend = [];
+		queue[msg.guild.id].songs.forEach((song, i) => { tosend.push(`\`${i+1}.\`**${song.title}** added by **${song.requester}**`);});
+		msg.channel.sendMessage(`**${msg.guild.name}'s server music playlist \`${tosend.length} song(s)\`**\n${tosend.slice(0,15).join('\n')}`);
+		} else if(msg.content.startsWith("add")) {
+			let input = msg.content.slice(16);
+			
+			search(input, opts, function(err, results) {
+				if(err) return console.log(err);
+				console.dir(results);
+				var url = results[0].link;
+				yt.getInfo(url, (err, info) => {
+					if(err) {
+						return msg.channel.sendMessage(`❌ **${input}**`);
+					}
+					if (!queue.hasOwnProperty(msg.guild.id)) queue[msg.guild.id] = {}, queue[msg.guild.id].playing = false, queue[msg.guild.id].songs = [];
+					queue[msg.guild.id].songs.push({url: url, title: info.title, requester: msg.author.username});
+					msg.channel.sendMessage(`✅ added to playlist **${info.title}**`);
+				});
+			});
+		}
   }
 };
 
