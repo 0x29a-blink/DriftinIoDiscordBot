@@ -49,7 +49,7 @@ settings.exec(`git pull`, function(err, stdout, stderr){
 };
 
 client.on('ready', () => {
-    console.log('Lets drift'); bot.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
+    console.log('Lets drift'); client.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
 });
 
 client.on('reconnecting', () => {
@@ -66,7 +66,7 @@ msg.channel.sendMessage(settings.cmdeasy.get(command_name))
   }
 
 
-    if (msg.author.bot) return;
+    if (msg.author.client) return;
     if (!msg.content.startsWith(settings.pf)) return;
 
     const content = msg.content.slice(settings.pf.length);
