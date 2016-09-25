@@ -48,6 +48,15 @@ bot.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
         }
 }) */
 bot.on(`message`, (msg) => {
+	if (msg.author.id === `177286767903244288` || msg.author.id === `160853902726660096`) {
+    if (msg.content === "drift update code") {
+  const exec = require('child_process').exec;
+   exec(`git pull`, function(err, stdout, stderr){
+      msg.channel.sendMessage("\`\`\`\n" + stdout +"\n"+ stderr + "\n\`\`\`")
+    });
+      
+    }
+  }
 var cmd = msg.content
 	if (cmd === settings.PREFIX + "owner") {
 		msg.channel.sendMessage("***The Bot Owner Is `Deboss`***")
