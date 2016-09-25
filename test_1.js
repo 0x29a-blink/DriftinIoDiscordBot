@@ -3,6 +3,7 @@ var Discord = require('discord.js')
 var bot = new Discord.Client({bot: true})
 
 var settings = {}
+settings.DriftID = `212749774011629578`
 settings.config = require(`./config.json`)
 settings.DB = require(`./driftinDB.json`)
 settings.TOKEN = settings.config.TOKEN
