@@ -113,9 +113,9 @@ var cmd = msg.content
 	if (cmd === settings.PREFIX + "stats piercer") {
 		msg.channel.sendMessage(`**❯_ **Piercer
 **❯_ **Speed**❯**${settings.DB.piercer.Speed}
-**❯_ **Defense**❯**${settings.DB.piercer.Defence}
+**❯_ **Defense**❯**${settings.DB.piercer.Defense}
 **❯_ **Damage**❯**${settings.DB.piercer.Damage}
-**❯_ **Handling**❯**${settings.DB.piercer.Handlink}`)
+**❯_ **Handling**❯**${settings.DB.piercer.Handling}`)
 	}
 	if (cmd === settings.PREFIX + "stats sludger") {
 		msg.channel.sendMessage(`**❯_ **Sludger
