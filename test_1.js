@@ -54,13 +54,10 @@ bot.on(`message`, (msg) => {
 	var evalcode = message.content.substring(11)
                 try {
                         var evaled = eval(evalcode);
-                        if (typeof evaled !== 'string') {
-                                evaled = require('util').inspect(evaled);
-                        }
-                        message.channel.sendMessage(evaled)
+                        msg.channel.sendMessage(evaled)
                 }
                 catch (err) {
-                        message.channel.sendMessage(clean(err));
+                        msg.channel.sendMessage(err);
                 }
         }
 	}
