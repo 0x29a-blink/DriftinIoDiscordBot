@@ -57,6 +57,7 @@ settings.exec(`git pull`, function(err, stdout, stderr){
     }
   },
   'music': msg => {
+msg.content = msg.content.substring(12)
   if(msg.content === 'play') {
 			if (queue[msg.guild.id] === undefined) return msg.channel.sendMessage(`**drift add** \`song_name\``);
 			if (!bot.voiceConnections.exists('channel', msg.member.voiceChannel)) return msg.channel.sendMessage(`**drift join** to make me join a voice channel`);
