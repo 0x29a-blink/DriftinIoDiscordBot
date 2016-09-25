@@ -49,14 +49,14 @@ bot.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
         }
 }) */
 bot.on(`message`, (msg) => {
-	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
+	/* if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
 	if (msg.content.startsWith(`drift eval`)) {
 	var evalcode = message.content.substring(11)
 function evalthis(args) {
 try { return eval(args) } catch (e) { return e } }
 msg.channel.sendMessage(evalthis(evalcode));
 	}
-	}
+	} */
 	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
     if (msg.content === "drift update code") {
   const exec = require('child_process').exec;
