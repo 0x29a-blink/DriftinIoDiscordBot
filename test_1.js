@@ -51,7 +51,18 @@ bot.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
 bot.on(`message`, (msg) => {
 	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
 	if (msg.content.startsWith(`drift eval`)) {
-	msg.channel.sendMessage(eval(msg.content.substring(10)))
+	var evalcode = message.content.substring(11)
+                try {
+                        var evaled = eval(evalcode);
+                        if (typeof evaled !== 'string') {
+                                evaled = require('util').inspect(evaled);
+                        }
+                        message.channel.sendMessage(evaled)
+                }
+                catch (err) {
+                        message.channel.sendMessage(clean(err));
+                }
+        }
 	}
 	}
 	if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
