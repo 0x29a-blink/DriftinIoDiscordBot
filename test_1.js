@@ -69,14 +69,18 @@ var cmd = msg.content
 		msg.channel.sendMessage("***The Bot Owner Is `Deboss`***")
 	}
 	if (cmd.startsWith(settings.PREFIX + "stats racer")) {
-		msg.channel.sendMessage(`Racer
-Speed : ${settings.DB.racer.Speed}
-Defense : ${settings.DB.racer.Defense}
-Damage : ${settings.DB.racer.Damage}
-Handling : ${settings.DB.racer.Handling}`)
+		msg.channel.sendMessage(`**❯_ **Racer
+**❯_ **Speed❯${settings.DB.racer.Speed}
+**❯_ **Defense❯${settings.DB.racer.Defense}
+**❯_ **Damage❯${settings.DB.racer.Damage}
+**❯_ **Handling❯${settings.DB.racer.Handling}`)
 	}
 	if (cmd === settings.PREFIX + "stats bully") {
-		msg.channel.sendMessage("Bully\nSpeed : 🔲\nDefense : 🔲🔲🔲🔲\nDamage : 🔲\nHandling : 🔲🔲🔲🔲")
+		msg.channel.sendMessage(`**❯_ **Bully
+Speed**❯**${settings.DB.bully.Speed}
+Defense**❯**${settings.DB.bully.Defence}
+Damage**❯**${settings.DB.bully.Damage}
+Handling**❯**${settings.DB.bully.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats flash") {
 		msg.channel.sendMessage("Flash\nSpeed : 🔲🔲🔲🔲🔲🔲\nDefense : 🔲\nDamage : 🔲\nHandling : 🔲")
