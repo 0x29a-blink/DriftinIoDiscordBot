@@ -3,7 +3,6 @@ const bot = new Discord.Client({bot: true});
 
 // SETTINGS
 const settings = {}
-var bot = bot;
 settings.config = require('./config.json');
 settings.token = settings.config.TOKEN
 settings.prefix = `drift `
