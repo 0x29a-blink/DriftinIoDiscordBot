@@ -21,11 +21,11 @@ var opts = {
   key: settings.YTAPI
 };
 
-var 1 = `🔲`
-var 2 = `🔲🔲`
+// var 1 = `🔲`
+// var 2 = `🔲🔲`
 var 3 = `🔲🔲🔲`
-var 4 = `🔲🔲🔲🔲`
-var 5 = `🔲🔲🔲🔲🔲`
+// var 4 = `🔲🔲🔲🔲`
+// var 5 = `🔲🔲🔲🔲🔲`
 // cleverbot    = require("./cleverbot.js").cleverbot
 
 bot.on(`guildMemberAdd`, (guild, member) => {
