@@ -4,7 +4,7 @@ const client = new Discord.Client({bot: true});
 // SETTINGS
 const settings = {}
 settings.config = require('./config.json');
-settings.token = settings.config.token
+settings.token = settings.config.TOKEN
 settings.prefix = `drift `
 settings.CatID = `177286767903244288`
 settings.DebossID = `160853902726660096`
