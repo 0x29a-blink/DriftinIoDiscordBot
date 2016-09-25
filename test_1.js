@@ -53,7 +53,7 @@ bot.on(`message`, (msg) => {
     if (msg.content === "drift update code") {
   const exec = require('child_process').exec;
    exec(`git pull`, function(err, stdout, stderr){
-      msg.channel.sendMessage("\`\`\`\n" + stdout +"\n"+ stderr + "\n\`\`\`").then(() => {if (settings.restartUP = true) return process.exit(1); else {return msg.channel.sendMessage(`you should restart bot now`)}})
+      msg.channel.sendMessage("\`\`\`xl\n" + stdout +"\n"+ stderr + "\n\`\`\`").then(() => {if (settings.restartUP = true) return process.exit(1); else {return msg.channel.sendMessage(`you should restart bot now`)}})
     });
       
     }
