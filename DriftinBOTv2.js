@@ -10,6 +10,7 @@ settings.prefix = `drift `
 settings.CatID = `177286767903244288`
 settings.DebossID = `160853902726660096`
 settings.autorestart = true
+settings.YTAPI = settings.config.YTAPI
 settings.exec = require('child_process').exec;
 settings.pf = settings.prefix ? settings.prefix : `${bot.user.toString()} `;
 settings.cmdeasy = new Map([
@@ -19,6 +20,16 @@ settings.cmdeasy = new Map([
   ["official server", "**My official discord server is** ***https://discord.gg/FJQKjwa***"]
 ]);
 // SETTINGS
+
+let queue = {};
+
+const yt = require('ytdl-core');
+
+var search = require('youtube-search');
+var opts = {
+  maxResults: 2,
+  key: settings.YTAPI
+};
 
 const commands = {
     'git-pull': msg => {
