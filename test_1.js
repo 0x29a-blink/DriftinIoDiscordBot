@@ -9,7 +9,7 @@ settings.PREFIX = `drift `
 settings.YTAPI = settings.config.YTAPI
 settings.CatID = `177286767903244288`
 settings.DebossID = `160853902726660096`
-
+settings.restartUP = true
 let queue = {};
 
 const yt = require('ytdl-core');
@@ -53,7 +53,7 @@ bot.on(`message`, (msg) => {
     if (msg.content === "drift update code") {
   const exec = require('child_process').exec;
    exec(`git pull`, function(err, stdout, stderr){
-      msg.channel.sendMessage("\`\`\`\n" + stdout +"\n"+ stderr + "\n\`\`\`")
+      msg.channel.sendMessage("\`\`\`\n" + stdout +"\n"+ stderr + "\n\`\`\`").then(() => {if (settings.restartUP = true) return process.exit(1); else {return msg.channel.sendMessage(`you should restart bot now`)}}
     });
       
     }
