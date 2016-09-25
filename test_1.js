@@ -118,7 +118,7 @@ var cmd = msg.content
 **❯_ **Handling**❯**${settings.DB.piercer.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats sludger") {
-		msg.channel.sendMessage((`**❯_ **Sludger
+		msg.channel.sendMessage(`**❯_ **Sludger
 **❯_ **Speed**❯**${settings.DB.sludger.Speed}
 **❯_ **Defense**❯**${settings.DB.sludger.Defence}
 **❯_ **Damage**❯**${settings.DB.sludger.Damage}
