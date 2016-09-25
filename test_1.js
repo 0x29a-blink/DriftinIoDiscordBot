@@ -84,31 +84,59 @@ var cmd = msg.content
 	}
 	if (cmd === settings.PREFIX + "stats flash") {
 		msg.channel.sendMessage(`**❯_ **Flash
-**❯_ **Speed**❯**${settings.DB.bully.Speed}
-**❯_ **Defense**❯**${settings.DB.bully.Defence}
-**❯_ **Damage**❯**${settings.DB.bully.Damage}
-**❯_ **Handling**❯**${settings.DB.bully.Handlink}`)
+**❯_ **Speed**❯**${settings.DB.flash.Speed}
+**❯_ **Defense**❯**${settings.DB.flash.Defence}
+**❯_ **Damage**❯**${settings.DB.flash.Damage}
+**❯_ **Handling**❯**${settings.DB.flash.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats hazard") {
-		msg.channel.sendMessage("Hazard\nSpeed : 🔲🔲\nDefense : 🔲🔲🔲\nDamage : 🔲🔲🔲🔲🔲\nHandling : 🔲🔲")
+		msg.channel.sendMessage(`**❯_ **Hazard
+**❯_ **Speed**❯**${settings.DB.hazard.Speed}
+**❯_ **Defense**❯**${settings.DB.hazard.Defence}
+**❯_ **Damage**❯**${settings.DB.hazard.Damage}
+**❯_ **Handling**❯**${settings.DB.hazard.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats buster") {
-		msg.channel.sendMessage("Buster\nSpeed : 🔲\nDefense : 🔲🔲\nDamage : 🔲🔲🔲🔲\nHandling : 🔲🔲")
+		msg.channel.sendMessage(`**❯_ **Buster
+**❯_ **Speed**❯**${settings.DB.buster.Speed}
+**❯_ **Defense**❯**${settings.DB.buster.Defence}
+**❯_ **Damage**❯**${settings.DB.buster.Damage}
+**❯_ **Handling**❯**${settings.DB.buster.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats ambulamp") {
-		msg.channel.sendMessage("Ambulamp\nSpeed : 🔲🔲🔲\nDefense : 🔲🔲🔲\nDamage : 🔲\nHandling : 🔲🔲🔲")
+		msg.channel.sendMessage(`**❯_ **Ambulamp
+**❯_ **Speed**❯**${settings.DB.ambulamp.Speed}
+**❯_ **Defense**❯**${settings.DB.ambulamp.Defence}
+**❯_ **Damage**❯**${settings.DB.ambulamp.Damage}
+**❯_ **Handling**❯**${settings.DB.ambulamp.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats piercer") {
-		msg.channel.sendMessage("Piercer\nSpeed : 🔲🔲🔲🔲🔲\nDefense : 🔲\nDamage : 🔲\nHandling : 🔲🔲🔲🔲")
+		msg.channel.sendMessage(`**❯_ **Piercer
+**❯_ **Speed**❯**${settings.DB.piercer.Speed}
+**❯_ **Defense**❯**${settings.DB.piercer.Defence}
+**❯_ **Damage**❯**${settings.DB.piercer.Damage}
+**❯_ **Handling**❯**${settings.DB.piercer.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats sludger") {
-		msg.channel.sendMessage("Sludger\nSpeed : 🔲🔲🔲\nDefense : 🔲🔲🔲\nDamage : 🔲🔲\nHandling : 🔲🔲🔲🔲")
+		msg.channel.sendMessage((`**❯_ **Sludger
+**❯_ **Speed**❯**${settings.DB.sludger.Speed}
+**❯_ **Defense**❯**${settings.DB.sludger.Defence}
+**❯_ **Damage**❯**${settings.DB.sludger.Damage}
+**❯_ **Handling**❯**${settings.DB.sludger.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats deprived") {
-		msg.channel.sendMessage("Deprived\nSpeed : 🔲\nDefense : 🔲\nDamage : 🔲\nHandling : 🔲")
+		msg.channel.sendMessage(`**❯_ **Deprived
+**❯_ **Speed**❯**${settings.DB.deprived.Speed}
+**❯_ **Defense**❯**${settings.DB.deprived.Defence}
+**❯_ **Damage**❯**${settings.DB.deprived.Damage}
+**❯_ **Handling**❯**${settings.DB.deprived.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats star") {
-		msg.channel.sendMessage("Star\nSpeed : 🔲🔲\nDefense : 🔲🔲\nDamage : 🔲🔲🔲\nHandling : 🔲🔲🔲")
+		msg.channel.sendMessage(`**❯_ **Star
+**❯_ **Speed**❯**${settings.DB.star.Speed}
+**❯_ **Defense**❯**${settings.DB.star.Defence}
+**❯_ **Damage**❯**${settings.DB.star.Damage}
+**❯_ **Handling**❯**${settings.DB.star.Handlink}`)
 	}
 	if (cmd === settings.PREFIX + "stats list") {
 		msg.reply("The DriftinBot Stats Commands Are\n```fix\ndrift stats racer\ndrift stats bully\ndrift stats flash\ndrift stats hazard\ndrift stats buster\ndrift stats ambulamp\ndrift stats piercer\ndrift stats sludger\ndrift stats deprived\ndrift stats star\n```")
