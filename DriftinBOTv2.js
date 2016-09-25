@@ -3,6 +3,7 @@ const bot = new Discord.Client({bot: true});
 
 // SETTINGS
 const settings = {}
+var bot = bot;
 settings.config = require('./config.json');
 settings.token = settings.config.TOKEN
 settings.prefix = `drift `
@@ -34,7 +35,7 @@ settings.exec(`git pull`, function(err, stdout, stderr){
     }  },
     'eval': (msg, newContent) => {
         if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
-        const code = msg.sbustring(11)
+        const code = msg.substring(11)
         if (!code.length) return message.reply(`Add some code there`);
         try {
             const output = eval(code);
