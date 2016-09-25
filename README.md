@@ -1,2 +1,2 @@
 # ExoBot-DriftinBot
-crazy bots
+### https://github.com/DebossTFK/ExoBot-DriftinBot/wiki
