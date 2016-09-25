@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client({bot: true});
+const bot = new Discord.Client({bot: true});
 
 // SETTINGS
 const settings = {}
-var bot = client;
+var bot = bot;
 settings.config = require('./config.json');
 settings.token = settings.config.TOKEN
 settings.prefix = `drift `
@@ -11,7 +11,7 @@ settings.CatID = `177286767903244288`
 settings.DebossID = `160853902726660096`
 settings.autorestart = true
 settings.exec = require('child_process').exec;
-settings.pf = settings.prefix ? settings.prefix : `${client.user.toString()} `;
+settings.pf = settings.prefix ? settings.prefix : `${bot.user.toString()} `;
 settings.cmdeasy = new Map([
   ["owner", "***The Bot Owner Is \`Deboss\` & Cat***"],
   ["", ""],
@@ -49,15 +49,15 @@ settings.exec(`git pull`, function(err, stdout, stderr){
   }
 };
 
-client.on('ready', () => {
-    console.log('Lets drift'); client.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
+bot.on('ready', () => {
+    console.log('Lets drift'); bot.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
 });
 
-client.on('reconnecting', () => {
+bot.on('reconnecting', () => {
     console.log('my batteries ended need to change them and join the figth back');
 });
 
-client.on('message', msg => {
+bot.on('message', msg => {
   
   var command_name = msg.content.slice(6);
   
@@ -67,7 +67,7 @@ msg.channel.sendMessage(settings.cmdeasy.get(command_name))
   }
 
 
-    if (msg.author.client) return;
+    if (msg.author.bot) return;
     if (!msg.content.startsWith(settings.pf)) return;
 
     const content = msg.content.slice(settings.pf.length);
@@ -77,4 +77,4 @@ msg.channel.sendMessage(settings.cmdeasy.get(command_name))
 });
 
 
-client.login(settings.token);
+bot.login(settings.token);
