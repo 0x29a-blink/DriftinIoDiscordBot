@@ -25,8 +25,9 @@ var opts = {
 // cleverbot    = require("./cleverbot.js").cleverbot
 
 bot.on(`guildMemberAdd`, (guild, member) => {
+	if (guild.id === settings.DriftID) {
   bot.channels.get(`212750159040217088`).sendMessage(member.user.username + " welcome to Driftin.io's Official Discord Server please read <#212749774011629578> for the rules and have a great time :D")
-})
+} })
 
 bot.on("ready", () => {
   console.log(`ready to drift around`)
