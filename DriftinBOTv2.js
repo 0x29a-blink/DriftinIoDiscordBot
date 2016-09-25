@@ -14,10 +14,9 @@ settings.exec = require('child_process').exec;
 settings.pf = settings.prefix ? settings.prefix : `${bot.user.toString()} `;
 settings.cmdeasy = new Map([
   ["owner", "***The Bot Owner Is \`Deboss\` & Cat***"],
-  ["", ""],
-  ["", ""],
-  ["", ""],
-  ["", ""]
+  ["stats list", 'The DriftinBot Stats Commands Are\n```fix\ndrift stats racer\ndrift stats bully\ndrift stats flash\ndrift stats hazard\ndrift stats buster\ndrift stats ambulamp\ndrift stats piercer\ndrift stats sludger\ndrift stats deprived\ndrift stats star\n```'],
+  ["secret class", "How to unlock the secret class in Driftin.io\nOpen https://driftin.io\nDO NOT PRESS PLAY YET\nPress CTRL+SHIFT+I\nOnce inspect element is open click on Console\nThen type in console\n***classIndex=31081995***\nNow press play and BOOM you have the secret class"],
+  ["official server", "**My official discord server is** ***https://discord.gg/FJQKjwa***"]
 ]);
 // SETTINGS
 
