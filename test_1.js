@@ -64,11 +64,12 @@ msg.channel.sendMessage(evalthis(evalcode));
     }
   }
 var cmd = msg.content
+var typefind = msg.content.substring(12)
 	if (cmd === settings.PREFIX + "owner") {
 		msg.channel.sendMessage("***The Bot Owner Is `Deboss`***")
 	}
-	if (cmd === settings.PREFIX + "stats racer") {
-		msg.channel.sendMessage(`Racer\nSpeed : ${settings.DB.racer.Speed}\nDefense : 🔲🔲🔲\nDamage : 🔲🔲🔲\nHandling : 🔲🔲🔲`)
+	if (cmd.startsWith(settings.PREFIX + "stats")) {
+		msg.channel.sendMessage(`Racer\nSpeed : ${settings.DB.typefind.Speed}\nDefense : 🔲🔲🔲\nDamage : 🔲🔲🔲\nHandling : 🔲🔲🔲`)
 	}
 	if (cmd === settings.PREFIX + "stats bully") {
 		msg.channel.sendMessage("Bully\nSpeed : 🔲\nDefense : 🔲🔲🔲🔲\nDamage : 🔲\nHandling : 🔲🔲🔲🔲")
