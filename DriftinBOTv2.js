@@ -219,6 +219,9 @@ bot.on('message', msg => {
 **❯_ **Damage**❯**${settings.DB.star.Damage}
 **❯_ **Handling**❯**${settings.DB.star.Handling}`)
 	}
+    
+    });
+    bot.on('message', msg => {
   var command_name = msg.content.slice(6);
   
   if(settings.cmdeasy.has(command_name)) {
