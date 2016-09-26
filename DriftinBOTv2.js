@@ -18,7 +18,57 @@ settings.cmdeasy = new Map([
   ["owner", "***The Bot Owner Is \`Deboss\` & Cat***"],
   ["stats list", 'The DriftinBot Stats Commands Are\n```fix\ndrift stats racer\ndrift stats bully\ndrift stats flash\ndrift stats hazard\ndrift stats buster\ndrift stats ambulamp\ndrift stats piercer\ndrift stats sludger\ndrift stats deprived\ndrift stats star\n```'],
   ["secret class", "How to unlock the secret class in Driftin.io\nOpen https://driftin.io\nDO NOT PRESS PLAY YET\nPress CTRL+SHIFT+I\nOnce inspect element is open click on Console\nThen type in console\n***classIndex=31081995***\nNow press play and BOOM you have the secret class"],
-  ["official server", "**My official discord server is** ***https://discord.gg/FJQKjwa***"]
+  ["official server", "**My official discord server is** ***https://discord.gg/FJQKjwa***"],
+  [`stats racer`, `**❯_ **Racer
+**❯_ **Speed❯${settings.DB.racer.Speed}
+**❯_ **Defense❯${settings.DB.racer.Defense}
+**❯_ **Damage❯${settings.DB.racer.Damage}
+**❯_ **Handling❯${settings.DB.racer.Handling}`],
+  [`stats bully`, `**❯_ **Bully
+**❯_ **Speed**❯**${settings.DB.bully.Speed}
+**❯_ **Defense**❯**${settings.DB.bully.Defense}
+**❯_ **Damage**❯**${settings.DB.bully.Damage}
+**❯_ **Handling**❯**${settings.DB.bully.Handling}`],
+  [`stats flash`, `**❯_ **Flash
+**❯_ **Speed**❯**${settings.DB.flash.Speed}
+**❯_ **Defense**❯**${settings.DB.flash.Defense}
+**❯_ **Damage**❯**${settings.DB.flash.Damage}
+**❯_ **Handling**❯**${settings.DB.flash.Handling}`],
+  [`stats hazard`, `**❯_ **Hazard
+**❯_ **Speed**❯**${settings.DB.hazard.Speed}
+**❯_ **Defense**❯**${settings.DB.hazard.Defense}
+**❯_ **Damage**❯**${settings.DB.hazard.Damage}
+**❯_ **Handling**❯**${settings.DB.hazard.Handling}`],
+  [`stats buster`, `**❯_ **Buster
+**❯_ **Speed**❯**${settings.DB.buster.Speed}
+**❯_ **Defense**❯**${settings.DB.buster.Defense}
+**❯_ **Damage**❯**${settings.DB.buster.Damage}
+**❯_ **Handling**❯**${settings.DB.buster.Handling}`],
+  [`stats ambulamp`, `**❯_ **Ambulamp
+**❯_ **Speed**❯**${settings.DB.ambulamp.Speed}
+**❯_ **Defense**❯**${settings.DB.ambulamp.Defense}
+**❯_ **Damage**❯**${settings.DB.ambulamp.Damage}
+**❯_ **Handling**❯**${settings.DB.ambulamp.Handling}`],
+  [`stats piercer`, `**❯_ **Piercer
+**❯_ **Speed**❯**${settings.DB.piercer.Speed}
+**❯_ **Defense**❯**${settings.DB.piercer.Defense}
+**❯_ **Damage**❯**${settings.DB.piercer.Damage}
+**❯_ **Handling**❯**${settings.DB.piercer.Handling}`],
+  [`stats sludger`, `**❯_ **Sludger
+**❯_ **Speed**❯**${settings.DB.sludger.Speed}
+**❯_ **Defense**❯**${settings.DB.sludger.Defense}
+**❯_ **Damage**❯**${settings.DB.sludger.Damage}
+**❯_ **Handling**❯**${settings.DB.sludger.Handling}`],
+  [`stats deprived`, `**❯_ **Deprived
+**❯_ **Speed**❯**${settings.DB.deprived.Speed}
+**❯_ **Defense**❯**${settings.DB.deprived.Defense}
+**❯_ **Damage**❯**${settings.DB.deprived.Damage}
+**❯_ **Handling**❯**${settings.DB.deprived.Handling}`],
+  [`stats star`, `**❯_ **Star
+**❯_ **Speed**❯**${settings.DB.star.Speed}
+**❯_ **Defense**❯**${settings.DB.star.Defense}
+**❯_ **Damage**❯**${settings.DB.star.Damage}
+**❯_ **Handling**❯**${settings.DB.star.Handling}`]
 ]);
 // SETTINGS
 
@@ -147,79 +197,6 @@ bot.on('reconnecting', () => {
     console.log('my batteries ended need to change them and join the figth back');
 });
 
-bot.on('message', m => {
-	if (m.content === settings.PREFIX + "stats racer") {
-		msg.channel.sendMessage(`**❯_ **Racer
-**❯_ **Speed❯${settings.DB.racer.Speed}
-**❯_ **Defense❯${settings.DB.racer.Defense}
-**❯_ **Damage❯${settings.DB.racer.Damage}
-**❯_ **Handling❯${settings.DB.racer.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats bully") {
-		msg.channel.sendMessage(`**❯_ **Bully
-**❯_ **Speed**❯**${settings.DB.bully.Speed}
-**❯_ **Defense**❯**${settings.DB.bully.Defense}
-**❯_ **Damage**❯**${settings.DB.bully.Damage}
-**❯_ **Handling**❯**${settings.DB.bully.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats flash") {
-		msg.channel.sendMessage(`**❯_ **Flash
-**❯_ **Speed**❯**${settings.DB.flash.Speed}
-**❯_ **Defense**❯**${settings.DB.flash.Defense}
-**❯_ **Damage**❯**${settings.DB.flash.Damage}
-**❯_ **Handling**❯**${settings.DB.flash.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats hazard") {
-		msg.channel.sendMessage(`**❯_ **Hazard
-**❯_ **Speed**❯**${settings.DB.hazard.Speed}
-**❯_ **Defense**❯**${settings.DB.hazard.Defense}
-**❯_ **Damage**❯**${settings.DB.hazard.Damage}
-**❯_ **Handling**❯**${settings.DB.hazard.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats buster") {
-		msg.channel.sendMessage(`**❯_ **Buster
-**❯_ **Speed**❯**${settings.DB.buster.Speed}
-**❯_ **Defense**❯**${settings.DB.buster.Defense}
-**❯_ **Damage**❯**${settings.DB.buster.Damage}
-**❯_ **Handling**❯**${settings.DB.buster.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats ambulamp") {
-		msg.channel.sendMessage(`**❯_ **Ambulamp
-**❯_ **Speed**❯**${settings.DB.ambulamp.Speed}
-**❯_ **Defense**❯**${settings.DB.ambulamp.Defense}
-**❯_ **Damage**❯**${settings.DB.ambulamp.Damage}
-**❯_ **Handling**❯**${settings.DB.ambulamp.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats piercer") {
-		msg.channel.sendMessage(`**❯_ **Piercer
-**❯_ **Speed**❯**${settings.DB.piercer.Speed}
-**❯_ **Defense**❯**${settings.DB.piercer.Defense}
-**❯_ **Damage**❯**${settings.DB.piercer.Damage}
-**❯_ **Handling**❯**${settings.DB.piercer.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats sludger") {
-		msg.channel.sendMessage(`**❯_ **Sludger
-**❯_ **Speed**❯**${settings.DB.sludger.Speed}
-**❯_ **Defense**❯**${settings.DB.sludger.Defense}
-**❯_ **Damage**❯**${settings.DB.sludger.Damage}
-**❯_ **Handling**❯**${settings.DB.sludger.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats deprived") {
-		msg.channel.sendMessage(`**❯_ **Deprived
-**❯_ **Speed**❯**${settings.DB.deprived.Speed}
-**❯_ **Defense**❯**${settings.DB.deprived.Defense}
-**❯_ **Damage**❯**${settings.DB.deprived.Damage}
-**❯_ **Handling**❯**${settings.DB.deprived.Handling}`)
-	}
-	if (m.content === settings.PREFIX + "stats star") {
-		msg.channel.sendMessage(`**❯_ **Star
-**❯_ **Speed**❯**${settings.DB.star.Speed}
-**❯_ **Defense**❯**${settings.DB.star.Defense}
-**❯_ **Damage**❯**${settings.DB.star.Damage}
-**❯_ **Handling**❯**${settings.DB.star.Handling}`)
-	}
-    
-    });
     bot.on('message', msg => {
   var command_name = msg.content.slice(6);
   
