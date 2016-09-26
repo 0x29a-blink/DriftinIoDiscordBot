@@ -147,72 +147,71 @@ bot.on('reconnecting', () => {
     console.log('my batteries ended need to change them and join the figth back');
 });
 
-bot.on('message', msg => {
-  var cmd = msg.content
-	if (cmd.startsWith(settings.PREFIX + "stats racer")) {
+bot.on('message', m => {
+	if (m.content === settings.PREFIX + "stats racer") {
 		msg.channel.sendMessage(`**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
 **❯_ **Damage❯${settings.DB.racer.Damage}
 **❯_ **Handling❯${settings.DB.racer.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats bully") {
+	if (m.content === settings.PREFIX + "stats bully") {
 		msg.channel.sendMessage(`**❯_ **Bully
 **❯_ **Speed**❯**${settings.DB.bully.Speed}
 **❯_ **Defense**❯**${settings.DB.bully.Defense}
 **❯_ **Damage**❯**${settings.DB.bully.Damage}
 **❯_ **Handling**❯**${settings.DB.bully.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats flash") {
+	if (m.content === settings.PREFIX + "stats flash") {
 		msg.channel.sendMessage(`**❯_ **Flash
 **❯_ **Speed**❯**${settings.DB.flash.Speed}
 **❯_ **Defense**❯**${settings.DB.flash.Defense}
 **❯_ **Damage**❯**${settings.DB.flash.Damage}
 **❯_ **Handling**❯**${settings.DB.flash.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats hazard") {
+	if (m.content === settings.PREFIX + "stats hazard") {
 		msg.channel.sendMessage(`**❯_ **Hazard
 **❯_ **Speed**❯**${settings.DB.hazard.Speed}
 **❯_ **Defense**❯**${settings.DB.hazard.Defense}
 **❯_ **Damage**❯**${settings.DB.hazard.Damage}
 **❯_ **Handling**❯**${settings.DB.hazard.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats buster") {
+	if (m.content === settings.PREFIX + "stats buster") {
 		msg.channel.sendMessage(`**❯_ **Buster
 **❯_ **Speed**❯**${settings.DB.buster.Speed}
 **❯_ **Defense**❯**${settings.DB.buster.Defense}
 **❯_ **Damage**❯**${settings.DB.buster.Damage}
 **❯_ **Handling**❯**${settings.DB.buster.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats ambulamp") {
+	if (m.content === settings.PREFIX + "stats ambulamp") {
 		msg.channel.sendMessage(`**❯_ **Ambulamp
 **❯_ **Speed**❯**${settings.DB.ambulamp.Speed}
 **❯_ **Defense**❯**${settings.DB.ambulamp.Defense}
 **❯_ **Damage**❯**${settings.DB.ambulamp.Damage}
 **❯_ **Handling**❯**${settings.DB.ambulamp.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats piercer") {
+	if (m.content === settings.PREFIX + "stats piercer") {
 		msg.channel.sendMessage(`**❯_ **Piercer
 **❯_ **Speed**❯**${settings.DB.piercer.Speed}
 **❯_ **Defense**❯**${settings.DB.piercer.Defense}
 **❯_ **Damage**❯**${settings.DB.piercer.Damage}
 **❯_ **Handling**❯**${settings.DB.piercer.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats sludger") {
+	if (m.content === settings.PREFIX + "stats sludger") {
 		msg.channel.sendMessage(`**❯_ **Sludger
 **❯_ **Speed**❯**${settings.DB.sludger.Speed}
 **❯_ **Defense**❯**${settings.DB.sludger.Defense}
 **❯_ **Damage**❯**${settings.DB.sludger.Damage}
 **❯_ **Handling**❯**${settings.DB.sludger.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats deprived") {
+	if (m.content === settings.PREFIX + "stats deprived") {
 		msg.channel.sendMessage(`**❯_ **Deprived
 **❯_ **Speed**❯**${settings.DB.deprived.Speed}
 **❯_ **Defense**❯**${settings.DB.deprived.Defense}
 **❯_ **Damage**❯**${settings.DB.deprived.Damage}
 **❯_ **Handling**❯**${settings.DB.deprived.Handling}`)
 	}
-	if (cmd === settings.PREFIX + "stats star") {
+	if (m.content === settings.PREFIX + "stats star") {
 		msg.channel.sendMessage(`**❯_ **Star
 **❯_ **Speed**❯**${settings.DB.star.Speed}
 **❯_ **Defense**❯**${settings.DB.star.Defense}
