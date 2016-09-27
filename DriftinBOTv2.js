@@ -170,7 +170,7 @@ msg.content = msg.content.substring(12)
 		queue[msg.guild.id].songs.forEach((song, i) => { tosend.push(`\`${i+1}.\`**${song.title}** added by **${song.requester}**`);});
 		msg.channel.sendMessage(`**${msg.guild.name}'s server music playlist \`${tosend.length} song(s)\`**\n${tosend.slice(0,15).join('\n')}`);
 		} else if(msg.content.startsWith("add")) {
-			let input = msg.content
+			let input = msg.content.substring(4)
 			
 			search(input, opts, function(err, results) {
 				if(err) return console.log(err);
