@@ -190,7 +190,7 @@ msg.content = msg.content.substring(12)
 };
 
 bot.on('ready', () => {
-    console.log('Lets drift'); bot.user.setStatus(`online`, 'The Bot Prefix Is drift (drift stats list)')
+    console.log('Lets drift'); bot.user.setStatus(`online`, 'drift stats list (servers : bot.guilds.size)')
 });
 
 bot.on('reconnecting', () => {
