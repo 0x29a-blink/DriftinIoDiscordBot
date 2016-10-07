@@ -190,7 +190,7 @@ msg.content = msg.content.substring(12)
 };
 
 bot.on('ready', () => {
-    console.log('Lets drift'); bot.user.setStatus(`online`, 'drift stats list (servers : ' + bot.guilds.size + ')')
+    console.log('Lets drift'); bot.user.setStatus(`online`, 'drift stats list')
 });
 
 bot.on('reconnecting', () => {
