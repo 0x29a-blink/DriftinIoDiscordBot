@@ -190,7 +190,7 @@ msg.content = msg.content.substring(12)
 };
 
 bot.on('ready', () => {
-    console.log('Lets drift'); bot.user.setStatus(`online`, 'drift stats list')
+    console.log('Lets drift')
 });
 
 bot.on('reconnecting', () => {
@@ -213,7 +213,5 @@ msg.channel.sendMessage(settings.cmdeasy.get(command_name))
 
     const command = commands[content.split(' ')[0]];
     command(msg, content);
-});
-
-
+}):
 bot.login(settings.token);
