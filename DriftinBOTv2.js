@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client({bot: true});
+const bot = new Discord.Client({
+        bot: true
+});
 
 // SETTINGS
 const settings = {}
@@ -15,56 +17,56 @@ settings.YTAPI = settings.config.YTAPI
 settings.exec = require('child_process').exec;
 settings.pf = settings.prefix ? settings.prefix : `${bot.user.toString()} `;
 settings.cmdeasy = new Map([
-  ["owner", "***The Bot Owner Is \`Deboss\` & Cat***"],
-  ["stats list", 'The DriftinBot Stats Commands Are\n```fix\ndrift stats racer\ndrift stats bully\ndrift stats flash\ndrift stats hazard\ndrift stats buster\ndrift stats ambulamp\ndrift stats piercer\ndrift stats sludger\ndrift stats deprived\ndrift stats star\n```'],
-  ["secret class", "How to unlock the secret class in Driftin.io\nOpen https://driftin.io\nDO NOT PRESS PLAY YET\nPress CTRL+SHIFT+I\nOnce inspect element is open click on Console\nThen type in console\n***classIndex=31081995***\nNow press play and BOOM you have the secret class"],
-  ["official server", "**My official discord server is** ***https://discord.gg/FJQKjwa***"],
-  [`stats racer`, `**❯_ **Racer
+        ["owner", "***The Bot Owner Is \`Deboss\` & Cat***"],
+        ["stats list", 'The DriftinBot Stats Commands Are\n```fix\ndrift stats racer\ndrift stats bully\ndrift stats flash\ndrift stats hazard\ndrift stats buster\ndrift stats ambulamp\ndrift stats piercer\ndrift stats sludger\ndrift stats deprived\ndrift stats star\n```'],
+        ["secret class", "How to unlock the secret class in Driftin.io\nOpen https://driftin.io\nDO NOT PRESS PLAY YET\nPress CTRL+SHIFT+I\nOnce inspect element is open click on Console\nThen type in console\n***classIndex=31081995***\nNow press play and BOOM you have the secret class"],
+        ["official server", "**My official discord server is** ***https://discord.gg/FJQKjwa***"],
+        [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
 **❯_ **Damage❯${settings.DB.racer.Damage}
 **❯_ **Handling❯${settings.DB.racer.Handling}`],
-  [`stats bully`, `**❯_ **Bully
+        [`stats bully`, `**❯_ **Bully
 **❯_ **Speed**❯**${settings.DB.bully.Speed}
 **❯_ **Defense**❯**${settings.DB.bully.Defense}
 **❯_ **Damage**❯**${settings.DB.bully.Damage}
 **❯_ **Handling**❯**${settings.DB.bully.Handling}`],
-  [`stats flash`, `**❯_ **Flash
+        [`stats flash`, `**❯_ **Flash
 **❯_ **Speed**❯**${settings.DB.flash.Speed}
 **❯_ **Defense**❯**${settings.DB.flash.Defense}
 **❯_ **Damage**❯**${settings.DB.flash.Damage}
 **❯_ **Handling**❯**${settings.DB.flash.Handling}`],
-  [`stats hazard`, `**❯_ **Hazard
+        [`stats hazard`, `**❯_ **Hazard
 **❯_ **Speed**❯**${settings.DB.hazard.Speed}
 **❯_ **Defense**❯**${settings.DB.hazard.Defense}
 **❯_ **Damage**❯**${settings.DB.hazard.Damage}
 **❯_ **Handling**❯**${settings.DB.hazard.Handling}`],
-  [`stats buster`, `**❯_ **Buster
+        [`stats buster`, `**❯_ **Buster
 **❯_ **Speed**❯**${settings.DB.buster.Speed}
 **❯_ **Defense**❯**${settings.DB.buster.Defense}
 **❯_ **Damage**❯**${settings.DB.buster.Damage}
 **❯_ **Handling**❯**${settings.DB.buster.Handling}`],
-  [`stats ambulamp`, `**❯_ **Ambulamp
+        [`stats ambulamp`, `**❯_ **Ambulamp
 **❯_ **Speed**❯**${settings.DB.ambulamp.Speed}
 **❯_ **Defense**❯**${settings.DB.ambulamp.Defense}
 **❯_ **Damage**❯**${settings.DB.ambulamp.Damage}
 **❯_ **Handling**❯**${settings.DB.ambulamp.Handling}`],
-  [`stats piercer`, `**❯_ **Piercer
+        [`stats piercer`, `**❯_ **Piercer
 **❯_ **Speed**❯**${settings.DB.piercer.Speed}
 **❯_ **Defense**❯**${settings.DB.piercer.Defense}
 **❯_ **Damage**❯**${settings.DB.piercer.Damage}
 **❯_ **Handling**❯**${settings.DB.piercer.Handling}`],
-  [`stats sludger`, `**❯_ **Sludger
+        [`stats sludger`, `**❯_ **Sludger
 **❯_ **Speed**❯**${settings.DB.sludger.Speed}
 **❯_ **Defense**❯**${settings.DB.sludger.Defense}
 **❯_ **Damage**❯**${settings.DB.sludger.Damage}
 **❯_ **Handling**❯**${settings.DB.sludger.Handling}`],
-  [`stats deprived`, `**❯_ **Deprived
+        [`stats deprived`, `**❯_ **Deprived
 **❯_ **Speed**❯**${settings.DB.deprived.Speed}
 **❯_ **Defense**❯**${settings.DB.deprived.Defense}
 **❯_ **Damage**❯**${settings.DB.deprived.Damage}
 **❯_ **Handling**❯**${settings.DB.deprived.Handling}`],
-  [`stats star`, `**❯_ **Star
+        [`stats star`, `**❯_ **Star
 **❯_ **Speed**❯**${settings.DB.star.Speed}
 **❯_ **Defense**❯**${settings.DB.star.Defense}
 **❯_ **Damage**❯**${settings.DB.star.Damage}
@@ -78,31 +80,37 @@ const yt = require('ytdl-core');
 
 var search = require('youtube-search');
 var opts = {
-  maxResults: 2,
-  key: settings.YTAPI
+        maxResults: 2,
+        key: settings.YTAPI
 };
 
 const commands = {
-    'git-pull': msg => {
-      if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
-settings.exec(`git pull`, function(err, stdout, stderr){
-      msg.channel.sendMessage("\`\`\`xl\n" + stdout +"\n"+ stderr + "\n\`\`\`").then(() => {if (settings.autorestart = true) return process.exit(1); else {return msg.channel.sendMessage(`you should restart bot now`)}})
-    });
-    }
-    },
-    'restart': msg => {
-        if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
-        msg.channel.sendMessage('initiating protocol RESTART DRIFTIN BOT').then(() => process.exit(1));
-    }  },
-    'eval': (msg, newContent) => {
-      msg.content = msg.content.substring(11)
-        if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
-        const code = msg.content
-        if (!code.length) return message.reply(`Add some code there`);
-        try {
-            const output = eval(code);
-            msg.channel.sendMessage(
-                `\`INPUT:\`\n\`\`\`${code.replace(/`/g, '"')}\`\`\`\n\`OUTPUT:\`\n\`\`\`${typeof output === 'object' ? JSON.stringify(output) : output}\`\`\``
+                'git-pull': msg => {
+                        if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
+                                settings.exec(`git pull`, function(err, stdout, stderr) {
+                                        msg.channel.sendMessage("\`\`\`xl\n" + stdout + "\n" + stderr + "\n\`\`\`").then(() => {
+                                                if (settings.autorestart = true) return process.exit(1);
+                                                else {
+                                                        return msg.channel.sendMessage(`you should restart bot now`)
+                                                }
+                                        })
+                                });
+                        }
+                },
+                'restart': msg => {
+                        if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
+                                msg.channel.sendMessage('initiating protocol RESTART DRIFTIN BOT').then(() => process.exit(1));
+                        }
+                },
+                'eval': (msg, newContent) => {
+                                msg.content = msg.content.substring(11)
+                                if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
+                                        const code = msg.content
+                                        if (!code.length) return message.reply(`Add some code there`);
+                                        try {
+                                                const output = eval(code);
+                                                msg.channel.sendMessage(
+                                                                `\`INPUT:\`\n\`\`\`${code.replace(/`/g, '"')}\`\`\`\n\`OUTPUT:\`\n\`\`\`${typeof output === 'object' ? JSON.stringify(output) : output}\`\`\``
             );
         } catch(err) {
             msg.channel.sendMessage(`\`INPUT:\`\n\`\`\`${code.replace(/`/g, '"')}\`\`\`\n\`ERROR:\`\n\`\`\`${err}\`\`\``);
