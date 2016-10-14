@@ -25,6 +25,7 @@ settings.cmdeasy = new Map([
 	["owner/catcontact", "Cat's Contact Info\nDiscordMention : @Cat#0822\nDiscord ID : 177286767903244288\n***Git/hub*** : https://github.com/Cat-who-loves-bots"],
 	["stats shurikin", "**Unavalibe** __No Provided Stats From Sidney (the game developer)__"],
 	["help", "DriftinBot Commands\n drift owner\n drift owner/debosscontact\n drift owner/cancontact\n drift official server\n drift secret class\n drift stats list"],
+	["juice/youtube", "DrJuiceman's Youtube is ***https://www.youtube.com/channel/UC7xWv6zUNpsAIvsw8YbSACA***"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
