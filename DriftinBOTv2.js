@@ -103,7 +103,7 @@ const commands = {
                 },
                 'restart': msg => {
                         if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
-                                msg.channel.sendMessage('initiating protocol RESTART DRIFTIN BOT').then(() => process.exit(1));
+                                msg.channel.sendMessage('Ok Daddy ;)').then(() => process.exit(1));
                         }
                 },
                 'eval': (msg, newContent) => {
