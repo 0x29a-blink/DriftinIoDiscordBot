@@ -24,8 +24,7 @@ settings.cmdeasy = new Map([
 	["owner/debosscontact", "Deboss's Contact Info\nDiscordMention : @ムDebossム#8272 \nDiscord ID : 160853902726660096\nTwitter : https://twitter.com/DebossTFK_Army\nYouTube : https://www.youtube.com/channel/UC93x5w-V7qZ2vC1c0kuFWqQ\n***GitHub*** : https://github.com/DebossTFK/ExoBot-DriftinBot"],
 	["owner/catcontact", "Cat's Contact Info\nDiscordMention : @Cat#0822\nDiscord ID : 177286767903244288\n***Git/hub*** : https://github.com/Cat-who-loves-bots"],
 	["stats shurikin", "**Unavalibe** __No Provided Stats From Sidney (the game developer)__"],
-	```js
-["help", "DriftinBot Commands\n drift owner\n drift owner/debosscontact\n drift owner/cancontact\n drift official server\n drift secret class\n drift stats list"],
+	["help", "DriftinBot Commands\n drift owner\n drift owner/debosscontact\n drift owner/cancontact\n drift official server\n drift secret class\n drift stats list"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
