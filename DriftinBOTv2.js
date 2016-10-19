@@ -26,6 +26,7 @@ settings.cmdeasy = new Map([
 	["stats shurikin", "**Unavalibe** __No Provided Stats From Sidney (the game developer)__"],
 	["help", "DriftinBot Commands\n drift owner\n drift owner/debosscontact\n drift owner/cancontact\n drift official server\n drift secret class\n drift stats list"],
 	["moist", "https://cdn.discordapp.com/attachments/159964091157446656/237443628274810880/IMG_0030.JPG"],
+	["saly", "Server's Most Salty People\nHighNoon\nSwagi"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
