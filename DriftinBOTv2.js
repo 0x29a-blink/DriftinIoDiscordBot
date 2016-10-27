@@ -34,7 +34,7 @@ settings.cmdeasy = new Map([
 	["view bully", "https://cdn.discordapp.com/attachments/241245655593385985/241245782886318080/Bully.PNG"],
 	["view buster", "https://cdn.discordapp.com/attachments/241245655593385985/241245786975764481/Buster.PNG"],
 	["view deprived", "https://cdn.discordapp.com/attachments/241245655593385985/241245778838945802/Ambulance.PNG"],
-	["view ambulance", "Dick"],
+	["view ambulance", "https://cdn.discordapp.com/attachments/241245655593385985/241245778838945802/Ambulance.PNG"],
 	["view hazard", "https://cdn.discordapp.com/attachments/241245655593385985/241245804331925505/Hazard.PNG"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
