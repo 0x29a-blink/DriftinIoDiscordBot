@@ -26,7 +26,7 @@ settings.cmdeasy = new Map([
 	["stats shuriken", "**Unavalibe** __No Provided Stats From Sidney (the game developer)__"],
 	["help", "DriftinBot Commands\n drift owner\n drift owner/debosscontact\n drift owner/catcontact\n drift official server\n drift secret class\n drift stats list"],
 	["maps", "**All current maps are**\nSquare\nCircle\n`Note : i do not know the real map names but i just nammed them based off of their shape`"],
-	["view list", "**All Drift View Commands Are**\n```fix\nview ambulance\nview bully\nview buster\nview deprived\nview flash\nview hazard\nview piercer\nview racer\nview sludger\n```"],
+	["view list", "**All Drift View Commands Are**\n```fix\nview ambulance\nview bully\nview buster\nview deprived\nview flash\nview hazard\nview piercer\nview racer\nview sludger\nview shuriken\nview star\n```"],
 	["view racer", "https://cdn.discordapp.com/attachments/241245655593385985/241245815652220928/Racer.PNG"],
 	["view sludger", "https://cdn.discordapp.com/attachments/241245655593385985/241245821679435777/Sludger.PNG"],
 	["view flash", "https://cdn.discordapp.com/attachments/241245655593385985/241245798061309952/Flash.PNG"],
@@ -36,6 +36,8 @@ settings.cmdeasy = new Map([
 	["view deprived", "https://cdn.discordapp.com/attachments/241245655593385985/241245778838945802/Ambulance.PNG"],
 	["view ambulance", "https://cdn.discordapp.com/attachments/241245655593385985/241245778838945802/Ambulance.PNG"],
 	["view hazard", "https://cdn.discordapp.com/attachments/241245655593385985/241245804331925505/Hazard.PNG"],
+	["view star", "https://cdn.discordapp.com/attachments/241245655593385985/241259701273231360/Star.PNG"],
+	["view shuriken", "Too Lazy To Get Screen Shot"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
