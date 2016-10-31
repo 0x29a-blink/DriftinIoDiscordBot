@@ -217,6 +217,7 @@ msg.content = msg.content.substring(12)
 
 bot.on('ready', () => {
     console.log('Lets drift')
+    bot.user.setGame('This message will be updated soon just need to do testing')
 });
 
 bot.on('reconnecting', () => {
