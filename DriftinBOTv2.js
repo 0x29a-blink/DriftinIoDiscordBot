@@ -234,7 +234,7 @@ bot.on('reconnecting', () => {
 
     bot.on('message', msg => {
 	    
-	    if (message.content === 'wew') {
+	    if (msg.content === 'wew') {
 	msg.channel.sendMessage('lad');
  	}
   var command_name = msg.content.slice(6);
