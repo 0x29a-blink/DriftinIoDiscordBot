@@ -250,7 +250,7 @@ msg.channel.sendMessage(settings.cmdeasy.get(command_name))
     command(msg, content);
 	
 	    
-	if (msg.content === 'wew') {
+	if (message.content === 'wew') {
 	msg.channel.sendMessage('lad');
  	}
 })
