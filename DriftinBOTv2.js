@@ -248,5 +248,8 @@ msg.channel.sendMessage(settings.cmdeasy.get(command_name))
 
     const command = commands[content.split(' ')[0]];
     command(msg, content);
+	if (msg.content === 'wew') {
+	msg.channel.sendMessage('lad');
+ 	}
 })
 bot.login(settings.token);
