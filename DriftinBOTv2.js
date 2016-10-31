@@ -214,6 +214,8 @@ msg.content = msg.content.substring(12)
   }
 };
 
+bot.user.setGame('drift help')
+
 bot.on('ready', () => {
     console.log('Lets drift')
 });
