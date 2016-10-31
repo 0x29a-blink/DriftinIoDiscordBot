@@ -1,4 +1,3 @@
-const Discord = require('discord.js');
 const bot = new Discord.Client({
         bot: true
 });
@@ -233,8 +232,9 @@ bot.on('reconnecting', () => {
 });
 
     bot.on('message', msg => {
-	    var wew = 0;
+	    let wew = 0;
 	    if (msg.content.includes('wew')) {
+		    if (msg.author.bot) return;
 		    wew++;
 	msg.channel.sendMessage(`lad
 wew said this sesion: ${wew}`);
