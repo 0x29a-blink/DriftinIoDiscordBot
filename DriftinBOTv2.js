@@ -24,7 +24,15 @@ settings.cmdeasy = new Map([
 	["owner/debosscontact", "Deboss's Contact Info\nDiscordMention : @ムDebossム#8272 \nDiscord ID : 160853902726660096\nTwitter : https://twitter.com/DebossTFK_Army\nYouTube : https://www.youtube.com/channel/UC93x5w-V7qZ2vC1c0kuFWqQ\n***GitHub*** : https://github.com/DebossTFK/ExoBot-DriftinBot"],
 	["owner/catcontact", "Cat's Contact Info\nDiscordMention : @Cat#0822\nDiscord ID : 177286767903244288\n***Git/hub*** : https://github.com/Cat-who-loves-bots"],
 	["stats shuriken", "**Unavalibe** __No Provided Stats From Sidney (the game developer)__"],
-	["help", "DriftinBot Commands\n drift owner\n drift owner/debosscontact\n drift owner/catcontact\n drift official server\n drift secret class\n drift stats list"],
+	["help", `***DriftinBot Commands***
+			drift owner
+			drift owner/debosscontact
+			drift owner/catcontact
+			drift official server
+			drift secret class
+			drift stats list
+			view list
+			invite`],
 	["maps", "**All current maps are**\nSquare\nCircle\n`Note : i do not know the real map names but i just nammed them based off of their shape`"],
 	["view list", "**All Drift View Commands Are**\n```fix\nview ambulance\nview bully\nview buster\nview deprived\nview flash\nview hazard\nview piercer\nview racer\nview sludger\nview shuriken\nview star\n```"],
 	["view racer", "https://cdn.discordapp.com/attachments/241245655593385985/241245815652220928/Racer.PNG"],
