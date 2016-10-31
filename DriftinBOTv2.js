@@ -233,6 +233,10 @@ bot.on('reconnecting', () => {
 });
 
     bot.on('message', msg => {
+	    
+	    if (message.content === 'wew') {
+	msg.channel.sendMessage('lad');
+ 	}
   var command_name = msg.content.slice(6);
   
   if(settings.cmdeasy.has(command_name)) {
@@ -248,10 +252,5 @@ msg.channel.sendMessage(settings.cmdeasy.get(command_name))
 
     const command = commands[content.split(' ')[0]];
     command(msg, content);
-	
-	    
-	if (message.content === 'wew') {
-	msg.channel.sendMessage('lad');
- 	}
 })
 bot.login(settings.token);
