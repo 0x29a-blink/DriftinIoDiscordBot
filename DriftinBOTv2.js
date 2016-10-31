@@ -237,8 +237,7 @@ bot.on('reconnecting', () => {
 	    if (msg.content.includes('wew')) {
 		    if (msg.author.bot) return;
 		    wew++;
-	msg.channel.sendMessage(`lad
-wew said this sesion: ${wew}`);
+	msg.channel.sendMessage(`lad`);
  	}
   var command_name = msg.content.slice(6);
   
