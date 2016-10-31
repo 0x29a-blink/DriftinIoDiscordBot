@@ -37,7 +37,8 @@ settings.cmdeasy = new Map([
 	["view ambulance", "https://cdn.discordapp.com/attachments/241245655593385985/241245778838945802/Ambulance.PNG"],
 	["view hazard", "https://cdn.discordapp.com/attachments/241245655593385985/241245804331925505/Hazard.PNG"],
 	["view star", "https://cdn.discordapp.com/attachments/241245655593385985/241259701273231360/Star.PNG"],
-	["view shuriken", "Too Lazy To Get Screen Shot"],
+	["view shuriken", "https://discordapp.com/oauth2/authorize?client_id=227492512636469260&scope=bot&permissions=536345663"],
+	["invite", "Too Lazy To Get Screen Shot"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
@@ -213,8 +214,6 @@ msg.content = msg.content.substring(12)
 		}
   }
 };
-
-bot.user.setGame('drift help')
 
 bot.on('ready', () => {
     console.log('Lets drift')
