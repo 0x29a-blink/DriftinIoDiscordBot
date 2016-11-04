@@ -255,9 +255,4 @@ msg.channel.sendMessage(settings.cmdeasy.get(command_name))
     const command = commands[content.split(' ')[0]];
     command(msg, content);
 })
-bot.on('guildBanAdd', (guild, user) => {
-  guild.channels.get('227340558459338762')
-  guild.channels.get('229560540542795776')
-	message.channel.sendMessage(`${user} Has Been Banned`);
-});
 bot.login(settings.token);
