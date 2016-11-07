@@ -47,7 +47,6 @@ settings.cmdeasy = new Map([
 	["view star", "https://cdn.discordapp.com/attachments/241245655593385985/241259701273231360/Star.PNG"],
 	["view shuriken", "https://discordapp.com/oauth2/authorize?client_id=227492512636469260&scope=bot&permissions=536345663"],
 	["invite", "Too Lazy To Get Screen Shot"],
-	["fuck me in the", "Dick Puss"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
