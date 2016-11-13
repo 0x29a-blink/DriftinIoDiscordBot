@@ -239,6 +239,10 @@ bot.on('reconnecting', () => {
 		    wew++;
 	msg.channel.sendMessage(`lad`);
  	}
+	    	    if (msg.content.includes('ayy')) {
+		    if (msg.author.bot) return;
+	msg.channel.sendMessage(`lmao`);
+ 	}
   var command_name = msg.content.slice(6);
   
   if(settings.cmdeasy.has(command_name)) {
