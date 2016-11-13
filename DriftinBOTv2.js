@@ -31,7 +31,7 @@ settings.cmdeasy = new Map([
 		drift official server
 		drift secret class
 		drift stats list
-		drift drift view list
+		drift view list
 		drift invite`],
 	["maps", "**All current maps are**\nSquare\nCircle\n`Note : i do not know the real map names but i just nammed them based off of their shape`"],
 	["view list", "**All Drift View Commands Are**\n```fix\nview ambulance\nview bully\nview buster\nview deprived\nview flash\nview hazard\nview piercer\nview racer\nview sludger\nview shuriken\nview star\n```"],
@@ -45,8 +45,8 @@ settings.cmdeasy = new Map([
 	["view ambulance", "https://cdn.discordapp.com/attachments/241245655593385985/241245778838945802/Ambulance.PNG"],
 	["view hazard", "https://cdn.discordapp.com/attachments/241245655593385985/241245804331925505/Hazard.PNG"],
 	["view star", "https://cdn.discordapp.com/attachments/241245655593385985/241259701273231360/Star.PNG"],
-	["view shuriken", "https://discordapp.com/oauth2/authorize?client_id=227492512636469260&scope=bot&permissions=536345663"],
-	["invite", "Too Lazy To Get Screen Shot"],
+	["view shuriken", "Too Lazy To Get Screen Shot"],
+	["invite", "https://discordapp.com/oauth2/authorize?client_id=227492512636469260&scope=bot&permissions=536345663"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
