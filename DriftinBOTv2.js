@@ -237,7 +237,7 @@ bot.on('reconnecting', () => {
 	    if (msg.content.includes('wew')) {
 		    if (msg.author.bot) return;
 		    wew++;
-	msg.channel.sendMessage(`lad @everyone`);
+	msg.channel.sendMessage(`lad`);
  	}
 	    	    if (msg.content.includes('ayy')) {
 		    if (msg.author.bot) return;
