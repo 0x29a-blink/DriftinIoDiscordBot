@@ -18,34 +18,10 @@ settings.exec = require('child_process').exec;
 settings.pf = settings.prefix ? settings.prefix : `${bot.user.toString()} `;
 settings.cmdeasy = new Map([
         ["owner", "***The Bot Owner Is \`Deboss\` & Cat***"],
-        ["stats list", 'The DriftinBot Stats Commands Are\n```fix\ndrift stats racer\ndrift stats bully\ndrift stats flash\ndrift stats hazard\ndrift stats buster\ndrift stats ambulamp\ndrift stats piercer\ndrift stats sludger\ndrift stats deprived\ndrift stats star\ndrift stats shuriken\n```'],
-        ["secret class", "How to unlock the secret class in Driftin.io\nOpen https://driftin.io\nDO NOT PRESS PLAY YET\nPress CTRL+SHIFT+I\nOnce inspect element is open click on Console\nThen type in console\n***classIndex=31081995***\nNow press play and BOOM you have the secret class"],
         ["official server", "**My official discord server is** ***http://discord.io/exobotofficial***"],
 	["owner/debosscontact", "Deboss's Contact Info\nDiscordMention : @ムDebossム#8272 \nDiscord ID : 160853902726660096\nTwitter : https://twitter.com/DebossExoDev\nYouTube : https://www.youtube.com/channel/UC93x5w-V7qZ2vC1c0kuFWqQ\n***GitHub*** : https://github.com/DebossTFK/ExoBot-DriftinBot"],
 	["owner/catcontact", "Cat's Contact Info\nDiscordMention : @Cat#0822\nDiscord ID : 177286767903244288\n***Git/hub*** : https://github.com/Cat-who-loves-bots"],
-	["stats shuriken", "**Unavalibe** __No Provided Stats From Sidney (the game developer)__"],
-	["help", `***DriftinBot Commands***
-		drift owner
-		drift owner/debosscontact
-		drift owner/catcontact
-		drift official server
-		drift secret class
-		drift stats list
-		drift view list
-		drift invite`],
-	["maps", "**All current maps are**\nSquare\nCircle\n`Note : i do not know the real map names but i just nammed them based off of their shape`"],
-	["view list", "**All Drift View Commands Are**\n```fix\nview ambulance\nview bully\nview buster\nview deprived\nview flash\nview hazard\nview piercer\nview racer\nview sludger\nview shuriken\nview star\n```"],
-	["view racer", "https://cdn.discordapp.com/attachments/241245655593385985/241245815652220928/Racer.PNG"],
-	["view sludger", "https://cdn.discordapp.com/attachments/241245655593385985/241245821679435777/Sludger.PNG"],
-	["view flash", "https://cdn.discordapp.com/attachments/241245655593385985/241245798061309952/Flash.PNG"],
-	["view piercer", "https://cdn.discordapp.com/attachments/241245655593385985/241245810807799810/Piercer.PNG"],
-	["view bully", "https://cdn.discordapp.com/attachments/241245655593385985/241245782886318080/Bully.PNG"],
-	["view buster", "https://cdn.discordapp.com/attachments/241245655593385985/241245786975764481/Buster.PNG"],
-	["view deprived", "https://cdn.discordapp.com/attachments/241245655593385985/241245778838945802/Ambulance.PNG"],
-	["view ambulance", "https://cdn.discordapp.com/attachments/241245655593385985/241245778838945802/Ambulance.PNG"],
-	["view hazard", "https://cdn.discordapp.com/attachments/241245655593385985/241245804331925505/Hazard.PNG"],
-	["view star", "https://cdn.discordapp.com/attachments/241245655593385985/241259701273231360/Star.PNG"],
-	["view shuriken", "Too Lazy To Get Screen Shot"],
+	["help", `***Commands Are all Being Rewrote***`],
 	["invite", "https://discordapp.com/oauth2/authorize?client_id=227492512636469260&scope=bot&permissions=536345663"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
