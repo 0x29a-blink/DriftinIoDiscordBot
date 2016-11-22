@@ -17,12 +17,12 @@ settings.YTAPI = settings.config.YTAPI
 settings.exec = require('child_process').exec;
 settings.pf = settings.prefix ? settings.prefix : `${bot.user.toString()} `;
 settings.cmdeasy = new Map([
-        ["owner", "***The Bot Owner Is \`Deboss\` & Cat***"],
-        ["official server", "**My official discord server is** ***http://discord.io/exobotofficial***"],
+        ["owner", "***The Bot Owners Are ///Deboss\\\ & Cat***"],
+        ["official server", "**My Official Server Is** \n ***http://discord.io/exobotofficial***"],
 	["owner/debosscontact", "Deboss's Contact Info\nDiscordMention : @ムDebossム#8272 \nDiscord ID : 160853902726660096\nTwitter : https://twitter.com/DebossExoDev\nYouTube : https://www.youtube.com/channel/UC93x5w-V7qZ2vC1c0kuFWqQ\n***GitHub*** : https://github.com/DebossTFK/ExoBot-DriftinBot"],
 	["owner/catcontact", "Cat's Contact Info\nDiscordMention : @Cat#0822\nDiscord ID : 177286767903244288\n***Git/hub*** : https://github.com/Cat-who-loves-bots"],
-	["help", `***Commands Are all Being Rewrote***`],
-	["invite", "https://discordapp.com/oauth2/authorize?client_id=227492512636469260&scope=bot&permissions=536345663"],
+	["help", `***Commands Are All Being Rewrote For Another Game***`],
+	["invite", "**Here is my invite all permissions ARE needed for certain things** \n https://discordapp.com/oauth2/authorize?client_id=227492512636469260&scope=bot&permissions=536345663"],
         [`stats racer`, `**❯_ **Racer
 **❯_ **Speed❯${settings.DB.racer.Speed}
 **❯_ **Defense❯${settings.DB.racer.Defense}
@@ -93,7 +93,7 @@ const commands = {
                                         msg.channel.sendMessage("\`\`\`xl\n" + stdout + "\n" + stderr + "\n\`\`\`").then(() => {
                                                 if (settings.autorestart = true) return process.exit(1);
                                                 else {
-                                                        return msg.channel.sendMessage(`you should restart bot now`)
+                                                        return msg.channel.sendMessage(`Auto Restart Failed Please Restart Me`)
                                                 }
                                         })
                                 });
@@ -108,7 +108,7 @@ const commands = {
                                 msg.content = msg.content.substring(11)
                                 if (msg.author.id === settings.CatID || msg.author.id === settings.DebossID) {
                                         const code = msg.content
-                                        if (!code.length) return message.reply(`Add some code there`);
+                                        if (!code.length) return message.reply(`BOI YOU CANT SIMPLY DRIFT EVAL YOU NEED TO ADD SOME CODE THERE`);
                                         try {
                                                 const output = eval(code);
                                                 msg.channel.sendMessage(
@@ -200,8 +200,8 @@ msg.content = msg.content.substring(12)
 };
 
 bot.on('ready', () => {
-    console.log('Lets drift')
-    bot.user.setGame(`Drift Help || Currently in ${bot.guilds.size} Servers`)
+    console.log('Hah Ah Suh Dude I Just Restarted Driftin Bot ~Deboss')
+    bot.user.setGame(`Under Development For Another Game || Currently in ${bot.guilds.size} Servers`)
 });
 
 bot.on('reconnecting', () => {
