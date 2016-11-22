@@ -17,7 +17,7 @@ settings.YTAPI = settings.config.YTAPI
 settings.exec = require('child_process').exec;
 settings.pf = settings.prefix ? settings.prefix : `${bot.user.toString()} `;
 settings.cmdeasy = new Map([
-        ["owner", "***The Bot Owners Are ///Deboss\\\ & Cat***"],
+        ["owner", "***The Bot Owners Are ///Deboss\\\\\ & Cat***"],
         ["official server", "**My Official Server Is** \n ***http://discord.io/exobotofficial***"],
 	["owner/debosscontact", "Deboss's Contact Info\nDiscordMention : @ムDebossム#8272 \nDiscord ID : 160853902726660096\nTwitter : https://twitter.com/DebossExoDev\nYouTube : https://www.youtube.com/channel/UC93x5w-V7qZ2vC1c0kuFWqQ\n***GitHub*** : https://github.com/DebossTFK/ExoBot-DriftinBot"],
 	["owner/catcontact", "Cat's Contact Info\nDiscordMention : @Cat#0822\nDiscord ID : 177286767903244288\n***Git/hub*** : https://github.com/Cat-who-loves-bots"],
